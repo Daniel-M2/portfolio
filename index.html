@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Daniel C. Miarsa — Data Scientist / Analyst</title>
+<meta name="description" content="Portfolio of Daniel Christopher Miarsa — data scientist and analyst with a background in food production quality control, now building models and data pipelines.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2214%22 fill=%22%231e2823%22/><text x=%2250%22 y=%2266%22 font-size=%2054%22 font-family=%22monospace%22 fill=%22%23c97a1f%22 text-anchor=%22middle%22>D</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     TOP NAV
+     ============================================================ -->
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top">DANIEL C. MIARSA <small>// BATCH NO. 001</small></a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="nav-cta" href="https://a188238e-4dba-47ba-8eae-bcfe5e1c8514.filesusr.com/ugd/56e877_d1546fad252648c5af057e73b0017453.pdf" target="_blank" rel="noopener">Download CV</a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false"><span></span></button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+    <a href="https://a188238e-4dba-47ba-8eae-bcfe5e1c8514.filesusr.com/ugd/56e877_d1546fad252648c5af057e73b0017453.pdf" target="_blank" rel="noopener">Download CV</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="reveal is-visible">
+      <p class="eyebrow">Spec Sheet — Data Scientist / Analyst</p>
+      <h1 class="hero-name">Daniel Christopher <em>Miarsa</em></h1>
+      <p class="hero-desc">
+        I spent three years on a factory floor keeping chocolate production in spec — now I run the same discipline on data: control the inputs, watch the variance, and ship a model or a dashboard that a business can actually act on. <strong>Currently training in Python, SQL, ML and deployment at Hacktiv8.</strong>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#projects">See Projects</a>
+        <a class="btn btn-outline" href="#contact">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="reveal is-visible">
+      <div class="chart-card">
+        <div class="chart-card-head">
+          <span>Process Trend — Rec. #DM-01</span>
+          <span>n = 24</span>
+        </div>
+        <svg viewBox="0 0 480 210" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <!-- UCL / LCL -->
+          <line x1="0" y1="34" x2="480" y2="34" stroke="#c97a1f" stroke-width="1.4" stroke-dasharray="5 5"/>
+          <line x1="0" y1="176" x2="480" y2="176" stroke="#c97a1f" stroke-width="1.4" stroke-dasharray="5 5"/>
+          <line x1="0" y1="105" x2="480" y2="105" stroke="#cdc6ac" stroke-width="1"/>
+          <!-- jagged "production" segment -->
+          <polyline points="0,120 20,90 40,150 60,80 80,160 100,95 120,140 140,70 160,130 180,100"
+            stroke="#8a9089" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          <!-- smooth "data" trend segment -->
+          <path d="M180,100 C 220,115 250,60 290,72 C 330,84 350,40 390,46 C 420,50 440,38 480,30"
+            stroke="#29645c" stroke-width="2.6" stroke-linecap="round"/>
+          <!-- transition marker -->
+          <circle cx="180" cy="100" r="4.5" fill="#efece0" stroke="#c97a1f" stroke-width="2"/>
+          <circle cx="480" cy="30" r="4" fill="#29645c"/>
+        </svg>
+        <div class="chart-legend">
+          <span><i class="dot line-a"></i> Production variance</span>
+          <span><i class="dot line-b"></i> Data trend</span>
+          <span><i class="dot dashed"></i> Spec limit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- readouts -->
+<section style="padding-top:0; padding-bottom:0;">
+  <div class="wrap" style="padding-top:0;">
+    <div class="readouts reveal">
+      <div class="readout">
+        <span class="field-no">01 / TEAM SPAN</span>
+        <span class="value">34</span>
+        <span class="label">People led on the daily production floor</span>
+        <span class="spec">ROLE — MANAGEMENT TRAINEE</span>
+      </div>
+      <div class="readout">
+        <span class="field-no">02 / WASTE RATE</span>
+        <span class="value amber">&lt;5%</span>
+        <span class="label">Monthly waste held under spec, sustained</span>
+        <span class="spec">TARGET MET — WITHIN LIMIT</span>
+      </div>
+      <div class="readout">
+        <span class="field-no">03 / OUTPUT</span>
+        <span class="value">+93%</span>
+        <span class="label">Monthly production increase, year over year</span>
+        <span class="spec">TREND — UPWARD</span>
+      </div>
+      <div class="readout">
+        <span class="field-no">04 / DEFECT RATE</span>
+        <span class="value amber">45%→25%</span>
+        <span class="label">Chocolate block non-conformance reduced</span>
+        <span class="spec">DELTA — -20 PTS</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap chart-divider reveal">
+  <svg viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="28" x2="1200" y2="28" stroke="#cdc6ac" stroke-width="1" stroke-dasharray="2 6"/>
+    <path d="M0,30 C 100,10 200,46 300,28 C 400,10 500,46 600,28 C 700,10 800,46 900,28 C 1000,10 1100,46 1200,28"
+      stroke="#c97a1f" stroke-width="1.4" fill="none" opacity="0.55"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     ABOUT
+     ============================================================ -->
+<section class="about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <p class="eyebrow">Section 01 — About</p>
+      <h2 class="section-title" style="margin-bottom:22px;">From the production line to the data pipeline</h2>
+      <p class="lede">A Food Technology degree taught me how a system behaves under real-world variance. Data science gave me a better set of instruments to measure it.</p>
+      <p>I started out managing daily production for a chocolate manufacturer — leading a floor team, tracking yield, and chasing down the causes of defects until the numbers held. That work made me obsessive about clean data: if the input isn't trustworthy, no dashboard downstream will save you.</p>
+      <p>That obsession is why I pivoted into data science. I'm now building the analytical and machine learning skillset — Python, SQL, statistical testing, model deployment — to do at scale what I used to do manually on a factory floor: find the variable that's actually driving the outcome, and turn it into a decision someone can act on.</p>
+    </div>
+    <div class="reveal">
+      <span class="skills-col-title">Toolchain in daily use</span>
+      <div class="tag-cloud">
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Pandas / NumPy</span>
+        <span class="tag">Scikit-Learn</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Tableau</span>
+        <span class="tag">Apache Airflow</span>
+        <span class="tag">ElasticSearch</span>
+        <span class="tag">Streamlit</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Section 02 — Experience &amp; Education</p>
+        <h2 class="section-title">Work log</h2>
+      </div>
+      <p class="section-note">Entries run newest to oldest, same as a batch record — each one closed out with a measurable result.</p>
+    </div>
+
+    <div class="log">
+      <div class="log-entry reveal">
+        <div class="log-date">2024 — 2025</div>
+        <div class="log-rule"></div>
+        <div>
+          <h3 class="log-role">Management Trainee</h3>
+          <p class="log-org">PT. Mitra Hasil Bumi (The RR Chocolate) <span>— Cikande, Banten, Indonesia</span></p>
+          <ul class="log-bullets">
+            <li>Led a team of 34 for daily production and consistently hit output targets</li>
+            <li>Tracked and held monthly waste production under 5%</li>
+            <li>Grew monthly production output by 93% year over year</li>
+            <li>Cut chocolate block non-conformance from 45% down to 25%</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="log-entry reveal">
+        <div class="log-date">2022</div>
+        <div class="log-rule"></div>
+        <div>
+          <h3 class="log-role">Production Intern</h3>
+          <p class="log-org">PT. Belfoods Indonesia <span>— Jonggol, West Java, Indonesia</span></p>
+          <ul class="log-bullets">
+            <li>Diagnosed process issues across 3 chicken nugget production lines and proposed 6 fixes to stabilize finished-goods yield</li>
+            <li>Monitored post-steam (≥76°C) and post-freeze (≤-18°C) temperature specs</li>
+            <li>Calculated and maintained batter/breadcrumb pick-up within ±15% of meat-mix weight</li>
+            <li>Supported QC inline inspection and 4 R&amp;D / marketing product development projects</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <span class="field-no">EDU — 2025 – 2026</span>
+        <h4>Hacktiv8</h4>
+        <p class="edu-org">Professional Training Program · Jakarta, Indonesia</p>
+        <p class="edu-desc">Hands-on training across Python, SQL, RDBMS, statistics, machine learning, EDA &amp; visualization, model deployment, neural networks for computer vision &amp; NLP, and ETL/ELT with NoSQL.</p>
+      </div>
+      <div class="edu-card reveal">
+        <span class="field-no">EDU — 2019 – 2023</span>
+        <h4>Universitas Pelita Harapan</h4>
+        <p class="edu-org">B.Sc. Food Technology · Jakarta, Indonesia</p>
+        <p class="edu-desc">Covered food science fundamentals — biochemistry, nutrition, dietetics, food processing, microbiology — alongside the statistical analysis methods used for scientific research.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="wrap chart-divider reveal">
+  <svg viewBox="0 0 1200 56" preserveAspectRatio="none" aria-hidden="true">
+    <line x1="0" y1="28" x2="1200" y2="28" stroke="#cdc6ac" stroke-width="1" stroke-dasharray="2 6"/>
+    <path d="M0,26 C 100,44 200,8 300,28 C 400,48 500,8 600,28 C 700,48 800,8 900,28 C 1000,48 1100,8 1200,26"
+      stroke="#29645c" stroke-width="1.4" fill="none" opacity="0.5"/>
+  </svg>
+</div>
+
+<!-- ============================================================
+     PROJECTS
+     ============================================================ -->
+<section id="projects">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <div>
+        <p class="eyebrow">Section 03 — Projects</p>
+        <h2 class="section-title">Batch records</h2>
+      </div>
+      <p class="section-note">Five closed-out projects, each run end-to-end from raw data to a business recommendation.</p>
+    </div>
+
+    <div class="projects-grid">
+
+      <article class="proj-card reveal">
+        <div class="proj-top">
+          <span class="field-no">BATCH NO. 001</span>
+          <span class="proj-stamp">Analysis Complete</span>
+        </div>
+        <h3 class="proj-title">CDC Diabetes Health Factors</h3>
+        <p class="proj-desc">Descriptive and inferential analysis of lab, lifestyle and demographic variables behind diabetes prevalence, aimed at a 5% cut in prevalence and 15% cut in incidence within five years. Key findings visualized in an interactive Tableau dashboard.</p>
+        <div class="proj-tags"><span>Python</span><span>Statistical Testing</span><span>Tableau</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Daniel-M2/cdc-diabetes-analysis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.76 2.71 1.25 3.37.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://public.tableau.com/views/Milestone1_17623572447880/Demographic" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 3h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3ZM5 5h6v2H7v10h10v-4h2v6H5V5Z"/></svg>
+            Dashboard
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top">
+          <span class="field-no">BATCH NO. 002</span>
+          <span class="proj-stamp">Deployed</span>
+        </div>
+        <h3 class="proj-title">Amazon Review Summarizer — Samsung Phones</h3>
+        <p class="proj-desc">End-to-end NLP pipeline that clusters 800+ scraped reviews per rating tier into clear strength/weakness summaries with FASTopic, cutting the research time behind a purchase and targeting a 7% lift in conversion.</p>
+        <div class="proj-tags"><span>NLP</span><span>FASTopic</span><span>Web Scraping</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Daniel-M2/Amazon-Product-Review-Summarizer-Samsung" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.76 2.71 1.25 3.37.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://huggingface.co/spaces/fluqs1808/Final_Project_Samrize" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h6v2H7v10h10v-4h2v6H5V5Zm9-2h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Z"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top">
+          <span class="field-no">BATCH NO. 003</span>
+          <span class="proj-stamp">Analysis Complete</span>
+        </div>
+        <h3 class="proj-title">ZARA Sales Analysis</h3>
+        <p class="proj-desc">Built a Dockerized ETL flow — PostgreSQL to an Airflow DAG to ElasticSearch — and visualized the result in Kibana to evaluate sales performance and recommend moves aimed at 20% YoY revenue growth.</p>
+        <div class="proj-tags"><span>Airflow</span><span>PostgreSQL</span><span>ElasticSearch</span><span>Kibana</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Daniel-M2/ZARA-sales-analysis" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.76 2.71 1.25 3.37.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://www.canva.com/design/DAG_iFbz01k/Vu0Pc6-QK4eGLikiVzCy4g/view" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h16v2H4V4Zm0 14h16v2H4v-2Zm0-7h10v2H4v-2Z"/></svg>
+            Slides
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal">
+        <div class="proj-top">
+          <span class="field-no">BATCH NO. 004</span>
+          <span class="proj-stamp">Deployed</span>
+        </div>
+        <h3 class="proj-title">Age Detection Modeling</h3>
+        <p class="proj-desc">Compared a custom CNN against EfficientNetB2 and Xception on ~20,000 labeled faces, aiming to reduce ethnicity-biased age predictions in beauty-industry skin-check tools.</p>
+        <div class="proj-tags"><span>Computer Vision</span><span>CNN</span><span>TensorFlow</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Daniel-M2/age-detection-modeling" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.76 2.71 1.25 3.37.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://huggingface.co/spaces/dcm2/deployments" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h6v2H7v10h10v-4h2v6H5V5Zm9-2h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Z"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </article>
+
+      <article class="proj-card reveal" style="grid-column: span 2;">
+        <div class="proj-top">
+          <span class="field-no">BATCH NO. 005</span>
+          <span class="proj-stamp">Deployed</span>
+        </div>
+        <h3 class="proj-title">Ethereum Fraud Detection</h3>
+        <p class="proj-desc">Built and compared five supervised models — KNN, SVM, Decision Tree, Random Forest, XGBoost — to flag fraudulent Ethereum transactions from wallet behavior. XGBoost was selected on recall score and deployed via Streamlit on Hugging Face.</p>
+        <div class="proj-tags"><span>KNN</span><span>SVM</span><span>Random Forest</span><span>XGBoost</span><span>Streamlit</span></div>
+        <div class="proj-links">
+          <a href="https://github.com/Daniel-M2/eth-fraud-detection" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.94c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.54-3.88-1.54-.53-1.34-1.29-1.7-1.29-1.7-1.05-.72.08-.7.08-.7 1.17.08 1.78 1.2 1.78 1.2 1.03 1.76 2.71 1.25 3.37.96.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.27-5.23-5.67 0-1.25.45-2.28 1.18-3.08-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.24 2.76.12 3.05.74.8 1.18 1.83 1.18 3.08 0 4.41-2.69 5.38-5.25 5.66.41.36.78 1.05.78 2.12v3.14c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/></svg>
+            GitHub
+          </a>
+          <a href="https://huggingface.co/spaces/dcm2/deployment" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5 5h6v2H7v10h10v-4h2v6H5V5Zm9-2h7v7h-2V6.4l-9.3 9.3-1.4-1.4L17.6 5H14V3Z"/></svg>
+            Live Demo
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SKILLS
+     ============================================================ -->
+<section id="skills" style="background:var(--paper-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+  <div class="wrap skills-grid">
+    <div class="reveal">
+      <p class="eyebrow">Section 04 — Skillset</p>
+      <h2 class="section-title" style="margin-bottom:26px;">Professional toolkit</h2>
+      <div class="tag-cloud">
+        <span class="tag">Statistical Analysis</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">Data Analysis</span>
+        <span class="tag">Data Visualization</span>
+        <span class="tag">ETL / ELT</span>
+        <span class="tag">RDBMS</span>
+        <span class="tag">Computer Vision</span>
+        <span class="tag">NLP</span>
+      </div>
+    </div>
+    <div class="reveal">
+      <span class="skills-col-title">Languages</span>
+      <div class="lang-list">
+        <div class="lang-row">
+          <span class="lang-name">Indonesian</span>
+          <div class="gauge"><i style="width:100%"></i></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">English</span>
+          <div class="gauge"><i style="width:85%"></i></div>
+        </div>
+        <div class="lang-row">
+          <span class="lang-name">Mandarin</span>
+          <div class="gauge"><i style="width:25%; background:var(--amber);"></i></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT
+     ============================================================ -->
+<footer class="contact" id="contact">
+  <div class="wrap" style="padding:76px 32px 40px;">
+    <p class="eyebrow">Section 05 — Contact</p>
+    <h2 class="contact-title">Got a dataset that needs <em>answers</em>? Let's talk.</h2>
+    <p class="contact-sub">Open to data analyst and data scientist roles, freelance analysis, or just a conversation about the intersection of food science and data.</p>
+
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:danielmiarsa@gmail.com">
+        <span class="field-no">01</span>
+        <div class="c-label">Email</div>
+        <div class="c-value">danielmiarsa@gmail.com</div>
+      </a>
+      <a class="contact-item" href="https://wa.me/6281212059877" target="_blank" rel="noopener">
+        <span class="field-no">02</span>
+        <div class="c-label">WhatsApp</div>
+        <div class="c-value">+62 812-1205-9877</div>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/daniel-cm21/" target="_blank" rel="noopener">
+        <span class="field-no">03</span>
+        <div class="c-label">LinkedIn</div>
+        <div class="c-value">daniel-cm21</div>
+      </a>
+      <a class="contact-item" href="https://github.com/Daniel-M2" target="_blank" rel="noopener">
+        <span class="field-no">04</span>
+        <div class="c-label">GitHub</div>
+        <div class="c-value">Daniel-M2</div>
+      </a>
+    </div>
+
+    <div class="signoff">
+      <span>© <span id="year">2026</span> Daniel Christopher Miarsa</span>
+      <span>Record closed — built with intent, not a template</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
