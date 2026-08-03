@@ -14,24 +14,23 @@ if (menuBtn && mobileNav) {
   });
 }
 
-// ---------- scroll-spy on nav links ----------
-const sections = ['about', 'experience', 'projects', 'skills', 'contact']
-  .map(id => document.getElementById(id))
-  .filter(Boolean);
-const navAnchors = document.querySelectorAll('.navlinks a');
+// ---------- scroll-spy on the right-side dock nav ----------
+const sectionIds = ['top', 'about', 'experience', 'projects', 'skills', 'contact'];
+const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
+const dockItems = document.querySelectorAll('.dock-item');
 
-function updateActiveNav() {
-  let currentId = null;
-  const scrollPos = window.scrollY + 120;
+function updateActiveDock() {
+  let currentId = sections[0] ? sections[0].id : null;
+  const scrollPos = window.scrollY + 140;
   sections.forEach(sec => {
     if (sec.offsetTop <= scrollPos) currentId = sec.id;
   });
-  navAnchors.forEach(a => {
-    a.classList.toggle('active', a.getAttribute('href') === `#${currentId}`);
+  dockItems.forEach(item => {
+    item.classList.toggle('active', item.dataset.section === currentId);
   });
 }
-window.addEventListener('scroll', updateActiveNav, { passive: true });
-updateActiveNav();
+window.addEventListener('scroll', updateActiveDock, { passive: true });
+updateActiveDock();
 
 // ---------- reveal on scroll ----------
 const revealEls = document.querySelectorAll('.reveal');
