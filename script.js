@@ -15,7 +15,7 @@ if (menuBtn && mobileNav) {
 }
 
 // ---------- scroll-spy on the right-side dock nav ----------
-const sectionIds = ['top', 'about', 'experience', 'projects', 'skills', 'contact'];
+const sectionIds = ['top', 'experience', 'education', 'projects', 'skills', 'contact'];
 const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
 const dockItems = document.querySelectorAll('.dock-item');
 
@@ -31,6 +31,24 @@ function updateActiveDock() {
 }
 window.addEventListener('scroll', updateActiveDock, { passive: true });
 updateActiveDock();
+
+// ---------- scroll-spy on the detail-page sticky subnav ----------
+const detailSections = document.querySelectorAll('.detail-section[id]');
+const subnavLinks = document.querySelectorAll('.detail-subnav a');
+if (detailSections.length && subnavLinks.length) {
+  function updateActiveSubnav() {
+    let currentId = detailSections[0].id;
+    const scrollPos = window.scrollY + 120;
+    detailSections.forEach(sec => {
+      if (sec.offsetTop <= scrollPos) currentId = sec.id;
+    });
+    subnavLinks.forEach(link => {
+      link.classList.toggle('active', link.getAttribute('href') === `#${currentId}`);
+    });
+  }
+  window.addEventListener('scroll', updateActiveSubnav, { passive: true });
+  updateActiveSubnav();
+}
 
 // ---------- reveal on scroll ----------
 const revealEls = document.querySelectorAll('.reveal');

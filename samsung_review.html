@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0d0b">
+<title>Amazon Review Summarizer — Samsung Phones — Daniel C. Miarsa</title>
+<meta name="description" content="An end-to-end NLP pipeline that clusters Amazon smartphone reviews into clear strength/weakness summaries using FASTopic.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230a0d0b%22/><text x=%2250%22 y=%2266%22 font-size=%2254%22 font-family=%22monospace%22 fill=%22%23c6ff4d%22 text-anchor=%22middle%22>D</text></svg>">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="detail-topbar">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to Projects
+    </a>
+    <a class="brand" href="../index.html"><span class="brand-mark">D</span> DANIEL C. MIARSA</a>
+  </div>
+</header>
+
+<div class="detail-hero">
+  <img src="https://static.wixstatic.com/media/nsplsh_1ff279bc1d1044f9853ffff3a7ac812b~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/nsplsh_1ff279bc1d1044f9853ffff3a7ac812b~mv2.jpg" alt="Amazon Review Summarizer cover">
+  <div class="detail-hero-content">
+    <div class="detail-stamp-row">
+      <span class="field-no">#002</span>
+      <span class="proj-stamp">Deployed</span>
+    </div>
+    <h1 class="detail-title">Amazon Review Summarizer — Samsung Phones</h1>
+  </div>
+</div>
+
+<div class="wrap detail-meta">
+  <div class="detail-tags">
+    <span class="tag">NLP</span>
+    <span class="tag">FASTopic</span>
+    <span class="tag">Web Scraping</span>
+  </div>
+  <div class="detail-actions">
+    <a class="btn btn-solid" href="https://github.com/Daniel-M2/Amazon-Product-Review-Summarizer-Samsung" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn btn-outline" href="https://huggingface.co/spaces/fluqs1808/Final_Project_Samrize" target="_blank" rel="noopener">Live Demo</a>
+  </div>
+</div>
+
+<nav class="detail-subnav" id="subnav">
+  <div class="wrap">
+    <a href="#overview">Overview</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#results">Results</a>
+    <a href="#conclusions">Conclusions</a>
+    <a href="#recommendations">Recommendations</a>
+  </div>
+</nav>
+
+<main class="detail-body">
+
+  <section class="detail-section" id="overview">
+    <p class="eyebrow">Background</p>
+    <h2>Too many models, too little time</h2>
+    <p>Apple releases 4 flagship models a year; Samsung releases 5. With smartphone users typically upgrading every 2–4 years, buyers are left wading through reviews across e-commerce listings and YouTube before every purchase — a paradox of choice that stretches out lead conversion time.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="stat-value">5</span><span class="stat-label">New Samsung flagship models released per year</span></div>
+      <div class="stat-chip cyan"><span class="stat-value">2–4 yrs</span><span class="stat-label">Average smartphone upgrade cycle</span></div>
+    </div>
+    <p class="detail-source">Sources: <a href="https://www.sciencedirect.com/science/article/pii/S0308596125001193" target="_blank" rel="noopener">Corrocher &amp; Paganuzzi (2025)</a>, <a href="https://nsysgroup.com/blog/average-device-lifespan-how-long-does-a-cell-phone-last/" target="_blank" rel="noopener">NSYS (2024)</a></p>
+  </section>
+
+  <section class="detail-section" id="dataset">
+    <p class="eyebrow">Dataset</p>
+    <h2>800+ reviews per rating tier, per model</h2>
+    <p>The dataset was built through web scraping on Amazon US, collecting over 800 reviews for each rating tier across multiple Samsung phone models — a broad enough base to train and validate a topic model with confidence.</p>
+  </section>
+
+  <section class="detail-section" id="methodology">
+    <p class="eyebrow">Methodology</p>
+    <h2>From raw text to clustered topics</h2>
+    <p>Review text was cleaned and preprocessed, then passed through FASTopic for topic clustering — grouping thousands of individual reviews per phone into a handful of clear, recurring strengths and weaknesses instead of leaving a buyer to read them one by one.</p>
+  </section>
+
+  <section class="detail-section" id="results">
+    <p class="eyebrow">Results</p>
+    <h2>What actually drives price and sentiment</h2>
+
+    <h3>Spec correlation to price</h3>
+    <p>Storage and CPU speed emerged as the two variables most strongly correlated with a phone's price — more so than camera specs or display size.</p>
+
+    <h3>Topic clustering &amp; model quality</h3>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="stat-value">0.4–0.5</span><span class="stat-label">Coherence score (c_v) range across topic clusters</span></div>
+    </div>
+    <p>A c_v score in this range indicates the clustering is coherent enough for real industry use — the topics generated genuinely group similar sentiments rather than mixing unrelated feedback.</p>
+  </section>
+
+  <section class="detail-section" id="conclusions">
+    <p class="eyebrow">Conclusions</p>
+    <h2>A pipeline that's ready to plug in</h2>
+    <ul>
+      <li>The project delivers an end-to-end NLP pipeline that turns raw reviews into clear strength/weakness summaries per phone model using FASTopic</li>
+      <li>The average coherence score confirms the model is solid enough for industry deployment, not just a proof of concept</li>
+    </ul>
+  </section>
+
+  <section class="detail-section" id="recommendations">
+    <p class="eyebrow">Business Recommendations</p>
+    <h2>Where this plugs into the business</h2>
+    <div class="reco-grid">
+      <div class="reco-item">
+        <h4>E-commerce AI assistance</h4>
+        <p>Embed the model in an Amazon-style AI assistant to summarize customer reviews automatically, improving accuracy and reliability over manual reading.</p>
+      </div>
+      <div class="reco-item">
+        <h4>Lower market research costs</h4>
+        <p>Brands can access clustered reviews directly instead of commissioning separate market surveys to gauge product strengths and weaknesses.</p>
+      </div>
+      <div class="reco-item">
+        <h4>Real-time complaint monitoring</h4>
+        <p>Surface customer complaints as they emerge so brand reputation and satisfaction issues get handled before they compound.</p>
+      </div>
+      <div class="reco-item">
+        <h4>Higher lead conversion</h4>
+        <p>Giving buyers a condensed, trustworthy summary up front shortens the research phase and speeds up the path to purchase.</p>
+      </div>
+    </div>
+    <div class="detail-links-row">
+      <a class="btn btn-solid" href="https://github.com/Daniel-M2/Amazon-Product-Review-Summarizer-Samsung" target="_blank" rel="noopener">View Code on GitHub</a>
+      <a class="btn btn-outline" href="https://huggingface.co/spaces/fluqs1808/Final_Project_Samrize" target="_blank" rel="noopener">Try the Live Demo</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="detail-nextprev">
+  <a href="cdc-diabetes.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> CDC Diabetes Health Factors</a>
+  <a href="zara-sales.html">ZARA Sales Analysis <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<footer>
+  <div class="wrap" style="padding:0 32px 50px;">
+    <div class="signoff" style="border-top:none; padding-top:0;">
+      <span>© <span id="year">2026</span> Daniel Christopher Miarsa</span>
+      <a class="back-link" href="../index.html#projects">Back to all projects</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
