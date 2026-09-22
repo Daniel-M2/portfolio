@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0d0b">
+<title>ZARA Sales Analysis — Daniel C. Miarsa</title>
+<meta name="description" content="A Dockerized ETL pipeline — PostgreSQL, Airflow, ElasticSearch, and Kibana — built to evaluate ZARA's sales performance and recommend growth moves.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2222%22 fill=%22%230a0d0b%22/><text x=%2250%22 y=%2266%22 font-size=%2254%22 font-family=%22monospace%22 fill=%22%23c6ff4d%22 text-anchor=%22middle%22>D</text></svg>">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header class="detail-topbar">
+  <div class="wrap">
+    <a class="back-link" href="../index.html#projects">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+      Back to Projects
+    </a>
+    <a class="brand" href="../index.html"><span class="brand-mark">D</span> DANIEL C. MIARSA</a>
+  </div>
+</header>
+
+<div class="detail-hero">
+  <img src="https://static.wixstatic.com/media/nsplsh_79eadcf592304e54bb44dd2a83a7ecff~mv2.jpg/v1/fill/w_1600,h_900,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/nsplsh_79eadcf592304e54bb44dd2a83a7ecff~mv2.jpg" alt="ZARA Sales Analysis cover">
+  <div class="detail-hero-content">
+    <div class="detail-stamp-row">
+      <span class="field-no">#003</span>
+      <span class="proj-stamp">Analysis Complete</span>
+    </div>
+    <h1 class="detail-title">ZARA Sales Analysis</h1>
+  </div>
+</div>
+
+<div class="wrap detail-meta">
+  <div class="detail-tags">
+    <span class="tag">Airflow</span>
+    <span class="tag">PostgreSQL</span>
+    <span class="tag">ElasticSearch</span>
+    <span class="tag">Kibana</span>
+  </div>
+  <div class="detail-actions">
+    <a class="btn btn-solid" href="https://github.com/Daniel-M2/ZARA-sales-analysis" target="_blank" rel="noopener">GitHub Repo</a>
+    <a class="btn btn-outline" href="https://www.canva.com/design/DAG_iFbz01k/Vu0Pc6-QK4eGLikiVzCy4g/view" target="_blank" rel="noopener">PPT Slides</a>
+  </div>
+</div>
+
+<nav class="detail-subnav" id="subnav">
+  <div class="wrap">
+    <a href="#overview">Overview</a>
+    <a href="#dataset">Dataset</a>
+    <a href="#methodology">Methodology</a>
+    <a href="#results">Results</a>
+    <a href="#conclusions">Conclusions</a>
+    <a href="#recommendations">Recommendations</a>
+  </div>
+</nav>
+
+<main class="detail-body">
+
+  <section class="detail-section" id="overview">
+    <p class="eyebrow">Background</p>
+    <h2>Fast fashion moves fast — or you lose</h2>
+    <p>Fast-fashion players like ZARA, H&amp;M, SHEIN, UNIQLO, and Lululemon live and die by how quickly they read and respond to shifting trends. Misreading a season can mean significant losses or missed revenue, and the competition is intense: SHEIN alone pushes out 10,000 new designs a day.</p>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="stat-value">$34</span><span class="stat-label">ZARA average SKU price</span></div>
+      <div class="stat-chip cyan"><span class="stat-value">$26</span><span class="stat-label">H&amp;M average SKU price</span></div>
+      <div class="stat-chip"><span class="stat-value">$14</span><span class="stat-label">SHEIN average SKU price</span></div>
+    </div>
+    <p class="detail-source">Source: <a href="https://www.mckinsey.com/featured-insights/mckinsey-explainers/what-is-fast-fashion" target="_blank" rel="noopener">McKinsey (2025)</a></p>
+  </section>
+
+  <section class="detail-section" id="dataset">
+    <p class="eyebrow">Dataset</p>
+    <h2>ZARA retail sales records</h2>
+    <p>Transaction-level sales data across ZARA's retail categories, store sections, and seasonal stock cycles, used to trace which product lines and store layouts actually drive revenue.</p>
+  </section>
+
+  <section class="detail-section" id="methodology">
+    <p class="eyebrow">Methodology</p>
+    <h2>A full Dockerized ETL pipeline</h2>
+    <p>Raw data was loaded into PostgreSQL through Docker, then retrieved and preprocessed via an Apache Airflow DAG workflow. The cleaned output was pushed to ElasticSearch as a NoSQL store, with the final visualization layer built in Kibana — a setup that mirrors how a real retail analytics team would operationalize this kind of reporting.</p>
+  </section>
+
+  <section class="detail-section" id="results">
+    <p class="eyebrow">Results</p>
+    <h2>What's actually selling</h2>
+    <ul>
+      <li>Jackets remain ZARA's best-performing category, accounting for 67% of total revenue</li>
+      <li>Shoe revenue has overtaken T-shirt revenue, signaling strong and growing demand</li>
+      <li>ZARA customers show low price sensitivity, strong buying power, and high brand loyalty</li>
+      <li>The Aisle section drives the highest unit volume of any area in the store</li>
+      <li>Sweaters carry the highest seasonal deadstock ratio of any category</li>
+    </ul>
+  </section>
+
+  <section class="detail-section" id="conclusions">
+    <p class="eyebrow">Conclusions</p>
+    <h2>A loyal customer base with room to expand</h2>
+    <p>The data points to a customer base that's already loyal and willing to spend — the opportunity is less about winning new customers and more about expanding what loyal customers already buy, while fixing layout and inventory inefficiencies.</p>
+  </section>
+
+  <section class="detail-section" id="recommendations">
+    <p class="eyebrow">Business Recommendations</p>
+    <h2>Where to focus next</h2>
+    <div class="reco-grid">
+      <div class="reco-item">
+        <h4>Boost shoes and women's fashion</h4>
+        <p>Expanding jacket, sweater, and shoe lines for women could meaningfully lift total revenue by year end.</p>
+      </div>
+      <div class="reco-item">
+        <h4>Rotate product placement</h4>
+        <p>Moving slower-selling items to the Aisle or End-Cap areas — the store's highest-traffic zones — could lift their sales volume.</p>
+      </div>
+      <div class="reco-item">
+        <h4>Reduce low-selling stock</h4>
+        <p>Right-size T-shirt and jeans inventory to avoid deadstock, or move it via bundling (e.g. an extra 15% off on a $200+ purchase).</p>
+      </div>
+      <div class="reco-item">
+        <h4>Strengthen loyalty membership</h4>
+        <p>Retaining already-loyal customers protects market share and increases spend per person over time.</p>
+      </div>
+    </div>
+    <div class="detail-links-row">
+      <a class="btn btn-solid" href="https://github.com/Daniel-M2/ZARA-sales-analysis" target="_blank" rel="noopener">View Code on GitHub</a>
+      <a class="btn btn-outline" href="https://www.canva.com/design/DAG_iFbz01k/Vu0Pc6-QK4eGLikiVzCy4g/view" target="_blank" rel="noopener">View PPT Slides</a>
+    </div>
+  </section>
+
+</main>
+
+<div class="detail-nextprev">
+  <a href="samsung-review.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg> Amazon Review Summarizer</a>
+  <a href="age-detection.html">Age Detection Modeling <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+</div>
+
+<footer>
+  <div class="wrap" style="padding:0 32px 50px;">
+    <div class="signoff" style="border-top:none; padding-top:0;">
+      <span>© <span id="year">2026</span> Daniel Christopher Miarsa</span>
+      <a class="back-link" href="../index.html#projects">Back to all projects</a>
+    </div>
+  </div>
+</footer>
+
+<script src="../script.js"></script>
+</body>
+</html>
