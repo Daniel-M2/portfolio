@@ -90,26 +90,89 @@
       <div class="stat-chip"><span class="stat-value">13,000+</span><span class="stat-label">Diagnosed per 100,000 people</span></div>
       <div class="stat-chip cyan"><span class="stat-value">71.69%</span><span class="stat-label">Of diagnosed cases fall in the 55–79 age group</span></div>
     </div>
-    <ul>
-      <li>The 55–79 age group is the most prevalent, with rates ranging from 10.21% to 18.71%</li>
-    </ul>
+    <div class="chart-block reveal">
+      <div class="chart-block-head">Prevalence Concentration by Age</div>
+      <div class="chart-flex">
+        <div class="chart-donut-wrap">
+          <svg viewBox="0 0 150 150">
+            <circle cx="75" cy="75" r="60" fill="none" stroke="rgba(238,242,238,0.08)" stroke-width="16"/>
+            <circle cx="75" cy="75" r="60" fill="none" stroke="var(--lime)" stroke-width="16" stroke-dasharray="270.34 376.99" stroke-linecap="round" transform="rotate(-90 75 75)"/>
+            <text x="75" y="71" text-anchor="middle" font-family="'Space Grotesk',sans-serif" font-size="24" font-weight="700" fill="var(--text)">71.69%</text>
+            <text x="75" y="89" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="8.5" fill="var(--text-faint)">of cases, age 55–79</text>
+          </svg>
+        </div>
+        <div class="chart-range-wrap">
+          <span class="chart-stat-label">Prevalence rate within that group ranges 10.21%–18.71% — well above the 13.2% national average.</span>
+          <svg viewBox="0 0 300 60">
+            <line x1="0" y1="40" x2="300" y2="40" stroke="rgba(238,242,238,0.12)" stroke-width="1"/>
+            <rect x="153" y="33" width="127" height="14" rx="7" fill="var(--cyan)" opacity="0.9"/>
+            <line x1="198" y1="22" x2="198" y2="47" stroke="var(--lime)" stroke-width="2"/>
+            <text x="198" y="16" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--lime)">avg 13.2%</text>
+            <text x="2" y="55" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--text-faint)">0%</text>
+            <text x="278" y="55" font-family="'JetBrains Mono',monospace" font-size="9" fill="var(--text-faint)">20%</text>
+          </svg>
+        </div>
+      </div>
+    </div>
 
     <h3>Age &amp; gender</h3>
-    <ul>
-      <li>At age 35+, diabetes risk is more than 2× that of people in their 20s</li>
-      <li>Males are 17% more likely to have diabetes than females</li>
-    </ul>
+    <div class="chart-block reveal">
+      <div class="chart-block-head">Relative Risk Index — Age &amp; Gender</div>
+      <svg viewBox="0 0 480 210">
+        <line x1="0" y1="180" x2="480" y2="180" stroke="rgba(238,242,238,0.12)" stroke-width="1"/>
+        <rect x="40" y="116" width="64" height="64" rx="4" fill="var(--text-faint)" opacity="0.5"/>
+        <text x="72" y="106" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--text-soft)">1.0×</text>
+        <text x="72" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="var(--text-faint)">20s</text>
+        <rect x="120" y="53" width="64" height="127" rx="4" fill="var(--cyan)"/>
+        <text x="152" y="43" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--cyan)">2.0×+</text>
+        <text x="152" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="var(--text-faint)">35+</text>
+        <rect x="254" y="116" width="64" height="64" rx="4" fill="var(--text-faint)" opacity="0.5"/>
+        <text x="286" y="106" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--text-soft)">Base</text>
+        <text x="286" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="var(--text-faint)">Female</text>
+        <rect x="334" y="105" width="64" height="75" rx="4" fill="var(--lime)"/>
+        <text x="366" y="95" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--lime)">+17%</text>
+        <text x="366" y="198" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10" fill="var(--text-faint)">Male</text>
+      </svg>
+    </div>
 
     <h3>Income &amp; education</h3>
     <p>Higher education and income levels reduce diabetes risk by more than 60% — one of the strongest protective factors in the dataset.</p>
+    <div class="chart-block reveal">
+      <div class="chart-block-head">Relative Risk by Income &amp; Education Level</div>
+      <svg viewBox="0 0 300 210">
+        <line x1="0" y1="190" x2="300" y2="190" stroke="rgba(238,242,238,0.12)" stroke-width="1"/>
+        <rect x="45" y="40" width="80" height="150" rx="5" fill="var(--text-faint)" opacity="0.5"/>
+        <text x="85" y="30" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--text-soft)">100</text>
+        <text x="85" y="205" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text-faint)">Lower income/edu.</text>
+        <rect x="175" y="133" width="80" height="57" rx="5" fill="var(--lime)"/>
+        <text x="215" y="123" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--lime)">≤40 (–60%+)</text>
+        <text x="215" y="205" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="9.5" fill="var(--text-faint)">Higher income/edu.</text>
+      </svg>
+    </div>
 
-    <h3>Diet, alcohol, smoking &amp; exercise</h3>
-    <ul>
-      <li>Eating at least 1 fruit and 1 vegetable per day cuts risk by 18% and 29% respectively</li>
-      <li>Alcohol consumption showed an anomalous pattern, likely due to imbalanced sample groups with pre-existing poor health records</li>
-      <li>Active smokers are 37% more likely to have diabetes</li>
-      <li>Regular physical exercise lowers the probability of diabetes by close to 50%</li>
-    </ul>
+    <h3>Diet, smoking &amp; exercise</h3>
+    <div class="chart-block reveal">
+      <div class="chart-block-head">Lifestyle Factors vs. Diabetes Risk</div>
+      <svg viewBox="0 0 640 232">
+        <line x1="340" y1="4" x2="340" y2="226" stroke="rgba(238,242,238,0.15)" stroke-width="1" stroke-dasharray="3 4"/>
+        <text x="10" y="33" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">Exercise ≥2×/wk</text>
+        <rect x="140" y="22" width="200" height="22" rx="4" fill="var(--lime)"/>
+        <text x="132" y="37" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--lime)">–50%</text>
+        <text x="10" y="79" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">Veggie ≥1/day</text>
+        <rect x="224" y="68" width="116" height="22" rx="4" fill="var(--lime)" opacity="0.85"/>
+        <text x="216" y="83" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--lime)">–29%</text>
+        <text x="10" y="125" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">Fruit ≥1/day</text>
+        <rect x="268" y="114" width="72" height="22" rx="4" fill="var(--lime)" opacity="0.7"/>
+        <text x="260" y="129" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--lime)">–18%</text>
+        <text x="10" y="171" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">Active smoker</text>
+        <rect x="340" y="160" width="148" height="22" rx="4" fill="#ff6f61"/>
+        <text x="496" y="175" font-family="'JetBrains Mono',monospace" font-size="11" fill="#ff6f61">+37%</text>
+        <text x="10" y="217" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">Alcohol consumption</text>
+        <circle cx="340" cy="205" r="4" fill="none" stroke="var(--text-faint)" stroke-width="1.5" stroke-dasharray="2 2"/>
+        <text x="352" y="209" font-family="'JetBrains Mono',monospace" font-size="10" fill="var(--text-faint)">inconclusive — sample imbalance</text>
+      </svg>
+      <div class="chart-note">Bars run relative to a non-practicing baseline (0). Green = risk reduction, red = risk increase. Alcohol showed no reliable direction, likely due to imbalanced sample groups with pre-existing health conditions.</div>
+    </div>
   </section>
 
   <section class="detail-section" id="conclusions">
