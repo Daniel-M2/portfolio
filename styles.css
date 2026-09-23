@@ -955,6 +955,51 @@ section{ padding: 100px 0; }
 .reco-item h4{ font-size:14.5px; margin-bottom:6px; color: var(--text); }
 .reco-item p{ font-size:14px; margin:0; color: var(--text-soft); }
 
+/* ---------- result charts (detail pages) ---------- */
+.chart-block{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 22px 22px 18px;
+  margin: 6px 0 22px;
+}
+.chart-block-head{
+  font-family: var(--mono);
+  font-size:11px;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color: var(--text-faint);
+  margin-bottom:16px;
+}
+.chart-block svg{ width:100%; height:auto; display:block; overflow:visible; }
+.chart-note{
+  margin-top:14px;
+  padding-top:14px;
+  border-top: 1px dashed var(--border);
+  font-size:13px;
+  color: var(--text-faint);
+  line-height:1.6;
+}
+.chart-flex{ display:flex; align-items:center; gap:32px; flex-wrap:wrap; }
+.chart-donut-wrap{ flex-shrink:0; width:150px; }
+.chart-donut-wrap svg{ width:150px; height:150px; }
+.chart-range-wrap{ flex:1 1 220px; min-width:220px; }
+.chart-stat-big{
+  font-family: var(--serif);
+  font-size:28px;
+  font-weight:700;
+  color: var(--lime);
+  display:block;
+  line-height:1;
+  margin-bottom:6px;
+}
+.chart-stat-label{ font-size:13.5px; color: var(--text-soft); margin-bottom:16px; display:block; }
+@media (max-width: 480px){
+  .chart-flex{ gap:20px; }
+  .chart-donut-wrap{ width:120px; }
+  .chart-donut-wrap svg{ width:120px; height:120px; }
+}
+
 .detail-links-row{
   display:flex;
   gap:14px;
