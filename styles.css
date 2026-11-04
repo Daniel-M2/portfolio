@@ -973,6 +973,21 @@ section{ padding: 100px 0; }
 }
 .detail-figure figcaption strong{ color: var(--text); font-weight:600; }
 
+/* two figures side by side (stack on narrow screens) */
+.figure-pair{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+  margin: 18px 0 22px;
+}
+.figure-pair .detail-figure{
+  flex: 1 1 320px;
+  margin: 0;
+  display:flex;
+  flex-direction:column;
+}
+.figure-pair .detail-figure figcaption{ margin-top:auto; }
+
 /* ---------- result charts (detail pages) ---------- */
 .chart-block{
   background: var(--card);
