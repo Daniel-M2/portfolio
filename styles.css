@@ -955,6 +955,24 @@ section{ padding: 100px 0; }
 .reco-item h4{ font-size:14.5px; margin-bottom:6px; color: var(--text); }
 .reco-item p{ font-size:14px; margin:0; color: var(--text-soft); }
 
+/* ---------- inline reference figure (detail pages) ---------- */
+.detail-figure{
+  margin: 18px 0 24px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+}
+.detail-figure img{ width:100%; display:block; }
+.detail-figure figcaption{
+  padding: 14px 20px;
+  border-top: 1px dashed var(--border);
+  font-size: 13.5px;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+.detail-figure figcaption strong{ color: var(--text); font-weight:600; }
+
 /* ---------- result charts (detail pages) ---------- */
 .chart-block{
   background: var(--card);
