@@ -282,6 +282,46 @@
       <div class="stat-chip"><span class="stat-value" style="color:var(--text-soft)">Weak</span><span class="stat-label">Battery Capacity (0.15), Phone Weight (0.21)</span></div>
     </div>
 
+    <h3>Phone strengths &mdash; word cloud</h3>
+    <div class="figure-pair">
+      <figure class="detail-figure reveal">
+        <img src="images/wordcloud-before.jpg" alt="Word cloud of positive Amazon review words before preprocessing, dominated by phone, screen, good, great and battery">
+        <figcaption><strong>Before preprocessing</strong></figcaption>
+      </figure>
+      <figure class="detail-figure reveal">
+        <img src="images/wordcloud-after.jpg" alt="Word cloud of strength words after preprocessing, dominated by screen, camera, battery and well">
+        <figcaption><strong>After preprocessing</strong></figcaption>
+      </figure>
+    </div>
+    <ul>
+      <li>&ldquo;good&rdquo;, &ldquo;great&rdquo;, &ldquo;excellent&rdquo; and &ldquo;love&rdquo; show up as the positive sentiment words</li>
+      <li>&ldquo;battery&rdquo; and &ldquo;camera&rdquo; stand out as the features most tied to positive reviews</li>
+      <li>General words such as &ldquo;phone&rdquo; and &ldquo;good&rdquo; are removed after preprocessing, showing that <strong>stopwords</strong> were used to focus the data on phone specifications such as &ldquo;camera&rdquo; and &ldquo;battery&rdquo;</li>
+      <li><strong>Lemmatization</strong> is also visible, for example &ldquo;scratches&rdquo; &rarr; &ldquo;scratch&rdquo;</li>
+    </ul>
+
+    <h3>Phone weaknesses &mdash; word cloud</h3>
+    <div class="figure-pair">
+      <figure class="detail-figure reveal">
+        <img src="images/wordcloud-negative-before.jpg" alt="Word cloud of negative Amazon review words before preprocessing, dominated by phone, screen, issue, Samsung and time">
+        <figcaption><strong>Before preprocessing</strong></figcaption>
+      </figure>
+      <figure class="detail-figure reveal">
+        <img src="images/wordcloud-negative-after.jpg" alt="Word cloud of weakness words after preprocessing, dominated by screen, issue, call, charge and problem">
+        <figcaption><strong>After preprocessing</strong></figcaption>
+      </figure>
+    </div>
+    <ul>
+      <li>&ldquo;issue&rdquo; and &ldquo;problem&rdquo; show up as the negative sentiment words</li>
+      <li>&ldquo;phone&rdquo; and &ldquo;screen&rdquo; are the most frequent words</li>
+      <li>&ldquo;locked&rdquo; and &ldquo;unlock&rdquo; can indicate device security problems</li>
+      <li>&ldquo;Amazon&rdquo;, &ldquo;seller&rdquo;, &ldquo;return&rdquo; and &ldquo;refund&rdquo; can indicate customer dissatisfaction with the transaction experience</li>
+    </ul>
+    <ul>
+      <li>After preprocessing, the word cloud for negative reviews becomes more focused and clearly highlights users&rsquo; complaints</li>
+      <li>Words such as &ldquo;issue&rdquo;, &ldquo;problem&rdquo;, &ldquo;return&rdquo;, &ldquo;fix&rdquo;, &ldquo;charge&rdquo; and &ldquo;repair&rdquo; become more apparent, pointing to complaints about device malfunctions, battery/charging issues and after-sales service</li>
+    </ul>
+
     <h3>Topic clustering &amp; model quality</h3>
     <div class="stat-row">
       <div class="stat-chip"><span class="stat-value">0.4–0.5</span><span class="stat-label">Coherence score (c_v) range across topic clusters</span></div>
