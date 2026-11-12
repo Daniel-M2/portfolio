@@ -73,12 +73,19 @@
   <section class="detail-section" id="dataset">
     <p class="eyebrow">Dataset</p>
     <h2>ZARA retail sales records</h2>
+    <figure class="detail-figure reveal">
+      <img src="images/zara-dataset-overview.jpg" alt="ZARA dataset from Kaggle: 252 rows, 16 columns, 2 missing values, collected in February 2024, with each column described and photos showing end-cap and front-of-store product positions">
+    </figure>
+
     <p>Transaction-level sales data across ZARA's retail categories, store sections, and seasonal stock cycles, used to trace which product lines and store layouts actually drive revenue.</p>
   </section>
 
   <section class="detail-section" id="methodology">
     <p class="eyebrow">Methodology</p>
     <h2>A full Dockerized ETL pipeline</h2>
+    <figure class="detail-figure reveal">
+      <img src="images/zara-tech-stack.jpg" alt="Tools used: Docker, PostgreSQL, Apache Airflow, Elasticsearch and Python">
+    </figure>
     <p>Raw data was loaded into PostgreSQL through Docker, then retrieved and preprocessed via an Apache Airflow DAG workflow. The cleaned output was pushed to ElasticSearch as a NoSQL store, with the final visualization layer built in Kibana — a setup that mirrors how a real retail analytics team would operationalize this kind of reporting.</p>
   </section>
 
