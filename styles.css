@@ -1168,3 +1168,65 @@ section{ padding: 100px 0; }
 .stats-table tr.hl td{ background: rgba(198,255,77,0.07); color: var(--text); font-weight:600; }
 .stats-table tr.hl td:nth-child(2){ color: var(--lime); }
 .stats-table tr.hl td:nth-child(3){ color: #ff6f61; }
+
+/* ---------- image slider (detail pages) ---------- */
+.slider{
+  margin: 18px 0 26px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--card);
+}
+.slider-viewport:focus-visible{ outline: 2px solid var(--cyan); outline-offset: -2px; }
+.slider-track{
+  display:flex;
+  overflow-x:auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+}
+.slider-track::-webkit-scrollbar{ display:none; }
+.slide{
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  margin: 0;
+  background: #fff;
+  aspect-ratio: 2000 / 1019;
+}
+.slide a{ display:block; width:100%; height:100%; cursor: zoom-in; }
+.slide img{ width:100%; height:100%; object-fit: contain; object-position: top center; display:block; }
+.slider-controls{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding: 12px 16px;
+  border-top: 1px dashed var(--border);
+}
+.slider-btn{
+  width:38px; height:38px;
+  flex-shrink:0;
+  border-radius:50%;
+  border: 1px solid var(--border-strong);
+  display:flex; align-items:center; justify-content:center;
+  color: var(--text);
+  transition: border-color .15s ease, color .15s ease, opacity .15s ease;
+}
+.slider-btn svg{ width:16px; height:16px; }
+.slider-btn:hover:not(:disabled){ border-color: var(--lime); color: var(--lime); }
+.slider-btn:disabled{ opacity:.3; cursor: default; }
+.slider-meta{ flex:1; min-width:0; text-align:center; }
+.slider-caption{
+  display:flex; justify-content:center; align-items:baseline; gap:10px; flex-wrap:wrap;
+  font-size:13.5px; color: var(--text-soft); line-height:1.4;
+}
+.slider-count{ font-family: var(--mono); font-size:11px; letter-spacing:.06em; color: var(--text-faint); }
+.slider-dots{ display:flex; justify-content:center; gap:7px; margin-top:8px; }
+.slider-dot{
+  width:8px; height:8px; padding:0;
+  border-radius:999px;
+  background: rgba(238,242,238,0.22);
+  transition: width .2s ease, background .2s ease;
+}
+.slider-dot:hover{ background: rgba(238,242,238,0.45); }
+.slider-dot.active{ width:22px; background: var(--lime); }
