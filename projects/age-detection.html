@@ -70,18 +70,6 @@
       <div class="stat-chip"><span class="stat-value">19,906</span><span class="stat-label">Labeled face images</span></div>
       <div class="stat-chip cyan"><span class="stat-value">3</span><span class="stat-label">Age classes: Young, Middle, Old</span></div>
     </div>
-    <p>Sourced from <a href="https://www.kaggle.com/datasets/arashnic/faces-age-detection-dataset" target="_blank" rel="noopener" style="color:var(--cyan-dim);">Kaggle</a>, with no missing values but a noticeably imbalanced class distribution across the three age groups — a factor that shaped both the modeling approach and how the results should be read.</p>
-  </section>
-
-  <section class="detail-section" id="methodology">
-    <p class="eyebrow">Methodology</p>
-    <h2>Custom CNN vs. pre-trained architectures</h2>
-    <p>Multiple CNN architectures were built and evaluated — both hand-built and pre-trained — varying hidden layers, dropout rates, and epochs, and comparing them on loss and accuracy. Xception and EfficientNetB2 were used as the pre-trained baselines against the custom model.</p>
-  </section>
-
-  <section class="detail-section" id="results">
-    <p class="eyebrow">Results</p>
-    <h2>Consistent across skin tones, weaker on "Old"</h2>
     <div class="slider reveal" data-slider style="--slide-ratio: 16 / 9; --slide-pos: center;" aria-roledescription="carousel" aria-label="Class distribution and sample images from the age detection dataset">
       <div class="slider-viewport" tabindex="0">
         <div class="slider-track">
@@ -108,15 +96,27 @@
         <button type="button" class="slider-btn" data-dir="1" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
       </div>
     </div>
-    <div class="stat-row">
-      <div class="stat-chip"><span class="stat-value">68–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
-    </div>
     <ul>
       <li>The YOUNG class images showed varied skin tones, a handful of grayscale photos, some closed-eye and half-profile shots — realistic, messy real-world data</li>
       <li>The MIDDLE class included a high share of facial hair (22/40 sampled images), which the model had to learn to look past</li>
       <li>The OLD class included a high share of eyeglasses (18/40), adding another visual confound</li>
       <li>Image sizes and formats varied throughout, requiring resizing before training</li>
     </ul>
+    <p>Sourced from <a href="https://www.kaggle.com/datasets/arashnic/faces-age-detection-dataset" target="_blank" rel="noopener" style="color:var(--cyan-dim);">Kaggle</a>, with no missing values but a noticeably imbalanced class distribution across the three age groups — a factor that shaped both the modeling approach and how the results should be read.</p>
+  </section>
+
+  <section class="detail-section" id="methodology">
+    <p class="eyebrow">Methodology</p>
+    <h2>Custom CNN vs. pre-trained architectures</h2>
+    <p>Multiple CNN architectures were built and evaluated — both hand-built and pre-trained — varying hidden layers, dropout rates, and epochs, and comparing them on loss and accuracy. Xception and EfficientNetB2 were used as the pre-trained baselines against the custom model.</p>
+  </section>
+
+  <section class="detail-section" id="results">
+    <p class="eyebrow">Results</p>
+    <h2>Consistent across skin tones, weaker on "Old"</h2>
+    <div class="stat-row">
+      <div class="stat-chip"><span class="stat-value">68–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
+    </div>
   </section>
 
   <section class="detail-section" id="conclusions">
