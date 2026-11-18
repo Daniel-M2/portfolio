@@ -113,6 +113,7 @@
 
   <section class="detail-section" id="results">
     <p class="eyebrow">Results</p>
+    <h2>Custom CNN vs EfficientNetB2 vs Xception</h2>
     <p>Three models were trained for 30 epochs each. Below, their train vs. validation curves show how well each one learns and generalizes, and their classification reports show how they perform on the 2,986-image test set.</p>
 
     <div class="chart-block reveal">
@@ -238,18 +239,18 @@
           </table>
         </div>
         <p class="report-note">Highlighted rows: classes with recall below 0.25.</p>
-      <div class="model-verdict good">Xception performs well on the test set, with a higher accuracy (71%) than on the train set (68%). It also predicts the <strong>OLD</strong> class better than the Custom CNN (recall 0.22 vs. 0.17) and shows no sign of overfitting, so this model is used to predict the inference data.</div>
+      <div class="model-verdict good">Xception performs well on the test set, with a higher accuracy (71%) than on the train set (69%). It also predicts the <strong>OLD</strong> class better than the Custom CNN (recall 0.22 vs. 0.17) and shows no sign of overfitting, so this model is used to predict the inference data.</div>
     </article>
     <h2>Consistent across skin tones, weaker on "Old"</h2>
     <div class="stat-row">
-      <div class="stat-chip"><span class="stat-value">68–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
+      <div class="stat-chip"><span class="stat-value">69–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
     </div>
   </section>
 
   <section class="detail-section" id="conclusions">
     <p class="eyebrow">Conclusions</p>
     <h2>Good enough to ship as a prototype</h2>
-    <p>The model struggles most with the OLD class, but since most beauty-clinic clients skew younger, that's a manageable limitation rather than a blocker. More importantly, the 68–71% accuracy holds consistently across pale, light, dark, and even grayscale photos — meaning the model isn't quietly biased toward one skin tone, which was the whole point of building it.</p>
+    <p>The model struggles most with the OLD class, but since most beauty-clinic clients skew younger, that's a manageable limitation rather than a blocker. More importantly, the 69–71% accuracy holds consistently across pale, light, dark, and even grayscale photos — meaning the model isn't quietly biased toward one skin tone, which was the whole point of building it.</p>
   </section>
 
   <section class="detail-section" id="recommendations">
