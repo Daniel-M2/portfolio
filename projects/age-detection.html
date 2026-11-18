@@ -50,6 +50,7 @@
     <a href="#dataset">Dataset</a>
     <a href="#methodology">Methodology</a>
     <a href="#results">Results</a>
+    <a href="#model-comparison">Model Comparison</a>
     <a href="#conclusions">Conclusions</a>
     <a href="#recommendations">Recommendations</a>
   </div>
@@ -117,6 +118,126 @@
     <div class="stat-row">
       <div class="stat-chip"><span class="stat-value">68–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
     </div>
+  </section>
+
+  <section class="detail-section" id="model-comparison">
+    <p class="eyebrow">Model Comparison</p>
+    <h2>Custom CNN vs. EfficientNetB2 vs. Xception</h2>
+    <p>Three models were trained for 30 epochs each. Below, their train vs. validation curves show how well each one learns and generalizes, and their classification reports show how they perform on the 2,986-image test set.</p>
+
+    <div class="chart-block reveal">
+      <div class="chart-block-head">At a Glance &mdash; Test-Set Results</div>
+      <div class="table-scroll">
+        <table class="stats-table model-table">
+          <thead><tr><th>Model</th><th>Test accuracy</th><th>OLD recall</th><th class="txt">Curve diagnosis</th><th class="txt">Outcome</th></tr></thead>
+          <tbody>
+            <tr><td>Custom CNN</td><td>0.72</td><td>0.17</td><td class="txt">Loss still falling; accuracy gap widens after epoch 25</td><td class="txt">Needs improvement</td></tr>
+            <tr><td>EfficientNetB2</td><td>0.54</td><td>0.00</td><td class="txt">Good fit on loss; accuracy slightly underfit</td><td class="txt">Predicts MIDDLE only</td></tr>
+            <tr class="pick"><td>Xception</td><td>0.71</td><td>0.22</td><td class="txt">Train and validation stay close; still improving</td><td class="txt">Selected for inference</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="chart-note">OLD recall is shown because it is the hardest class: OLD images make up only 359 of the 2,986 test images.</div>
+    </div>
+
+    <article class="model-card reveal">
+      <div class="model-card-head">
+        <div><h3>1. Custom CNN</h3><span class="model-sub">Built with the Sequential API</span></div>
+        <span class="model-badge info">Needs improvement</span>
+      </div>
+      <figure class="model-curve">
+        <a href="images/age-curves-custom-cnn.png" target="_blank" rel="noopener" title="Open full size"><img src="images/age-curves-custom-cnn.png" alt="Custom CNN training curves: loss vs. validation loss falling over 30 epochs, and accuracy vs. validation accuracy with the gap widening after epoch 25" loading="lazy"></a>
+      </figure>
+      <div class="model-label">Final scores (epoch 30)</div>
+      <div class="stat-row">
+        <div class="stat-chip"><span class="stat-value">0.7503</span><span class="stat-label">Train accuracy</span></div>
+        <div class="stat-chip cyan"><span class="stat-value">0.7006</span><span class="stat-label">Validation accuracy</span></div>
+        <div class="stat-chip"><span class="stat-value">0.0497</span><span class="stat-label">Gap between train and validation (4.97%)</span></div>
+      </div>
+      <div class="model-label">Training behavior</div>
+      <ul>
+        <li><strong>Loss vs. Val-Loss:</strong> the loss is still declining at epoch 30, which indicates an underfit model</li>
+        <li><strong>Accuracy:</strong> the gap between train and validation widens after epoch 25, an overfit signal</li>
+      </ul>
+      <div class="model-label">Likely causes</div>
+      <ul>
+        <li><code>AveragePooling</code> generalizes the model input too much, hurting performance on validation and test data</li>
+        <li>No <code>Dropout</code>, which may contribute to the overfit signal in accuracy as epochs increase</li>
+      </ul>
+      <div class="model-label">Test-set classification report</div>
+        <div class="table-scroll">
+          <table class="stats-table report">
+            <thead><tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr></thead>
+            <tbody>
+            <tr><td>MIDDLE</td><td>0.77</td><td>0.78</td><td>0.77</td><td>1621</td></tr>
+            <tr class="bad"><td>OLD</td><td>0.66</td><td>0.17</td><td>0.27</td><td>359</td></tr>
+            <tr><td>YOUNG</td><td>0.65</td><td>0.81</td><td>0.72</td><td>1006</td></tr>
+            <tr class="total"><td>accuracy</td><td></td><td></td><td>0.72</td><td>2986</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note">Highlighted rows: classes with recall below 0.25.</p>
+      <div class="model-verdict info">Although the train&ndash;validation gap is 5% or less, the model needs further improvement to reach consistent loss and accuracy. It struggles to predict <strong>OLD</strong> faces because OLD images are underrepresented in the data.</div>
+    </article>
+
+    <article class="model-card reveal">
+      <div class="model-card-head">
+        <div><h3>2. EfficientNetB2</h3><span class="model-sub">Transfer learning</span></div>
+        <span class="model-badge bad">Poor test performance</span>
+      </div>
+      <figure class="model-curve">
+        <a href="images/age-curves-efficientnetb2.png" target="_blank" rel="noopener" title="Open full size"><img src="images/age-curves-efficientnetb2.png" alt="EfficientNetB2 training curves: loss dropping sharply then holding a steady gap to validation loss, and accuracy staying below 70% with a small train-validation gap" loading="lazy"></a>
+      </figure>
+      <p>Although EfficientNetB2 shows lower accuracy than the Custom CNN, the transfer-learning model is more consistent in its loss and accuracy plots.</p>
+      <div class="model-label">Training behavior</div>
+      <ul>
+        <li><strong>Loss vs. Val-Loss:</strong> drops significantly and then holds a steady gap, a good fit</li>
+        <li><strong>Accuracy:</strong> stays at or below 70% with a small train&ndash;validation gap, slightly underfit</li>
+      </ul>
+      <div class="model-label">Test-set classification report</div>
+        <div class="table-scroll">
+          <table class="stats-table report">
+            <thead><tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr></thead>
+            <tbody>
+            <tr><td>MIDDLE</td><td>0.54</td><td>1.00</td><td>0.70</td><td>1621</td></tr>
+            <tr class="bad"><td>OLD</td><td>0.00</td><td>0.00</td><td>0.00</td><td>359</td></tr>
+            <tr class="bad"><td>YOUNG</td><td>0.00</td><td>0.00</td><td>0.00</td><td>1006</td></tr>
+            <tr class="total"><td>accuracy</td><td></td><td></td><td>0.54</td><td>2986</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note">Highlighted rows: classes with recall below 0.25.</p>
+      <div class="model-verdict bad">The model performs poorly on the test set and is only able to predict the <strong>MIDDLE</strong> class.</div>
+    </article>
+
+    <article class="model-card reveal">
+      <div class="model-card-head">
+        <div><h3>3. Xception</h3><span class="model-sub">Transfer learning</span></div>
+        <span class="model-badge good">Selected for inference</span>
+      </div>
+      <figure class="model-curve">
+        <a href="images/age-curves-xception.png" target="_blank" rel="noopener" title="Open full size"><img src="images/age-curves-xception.png" alt="Xception training curves: loss and validation loss still decreasing, and accuracy close between train and validation, approaching 70%" loading="lazy"></a>
+      </figure>
+      <div class="model-label">Training behavior</div>
+      <ul>
+        <li><strong>Loss vs. Val-Loss:</strong> the loss is still decreasing, so more epochs are needed to reach a steady, low value</li>
+        <li><strong>Accuracy:</strong> train and validation scores are quite consistent, but the model still needs more epochs to reach 70% or higher</li>
+      </ul>
+      <div class="model-label">Test-set classification report</div>
+        <div class="table-scroll">
+          <table class="stats-table report">
+            <thead><tr><th>Class</th><th>Precision</th><th>Recall</th><th>F1</th><th>Support</th></tr></thead>
+            <tbody>
+            <tr><td>MIDDLE</td><td>0.71</td><td>0.84</td><td>0.77</td><td>1621</td></tr>
+            <tr class="bad"><td>OLD</td><td>0.73</td><td>0.22</td><td>0.34</td><td>359</td></tr>
+            <tr><td>YOUNG</td><td>0.71</td><td>0.67</td><td>0.69</td><td>1006</td></tr>
+            <tr class="total"><td>accuracy</td><td></td><td></td><td>0.71</td><td>2986</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="report-note">Highlighted rows: classes with recall below 0.25.</p>
+      <div class="model-verdict good">Xception performs well on the test set, with a higher accuracy (71%) than on the train set (68%). It also predicts the <strong>OLD</strong> class better than the Custom CNN (recall 0.22 vs. 0.17) and shows no sign of overfitting, so this model is used to predict the inference data.</div>
+    </article>
   </section>
 
   <section class="detail-section" id="conclusions">
