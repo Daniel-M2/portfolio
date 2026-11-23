@@ -1341,3 +1341,43 @@ section{ padding: 100px 0; }
   border:3px solid var(--c);
   box-sizing:border-box;
 }
+
+/* ---------- slider with a note beside each image ---------- */
+.slider--notes .slide{
+  aspect-ratio: auto;
+  display:grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+  background: var(--card);
+}
+.slider--notes .slide a.slide-media{
+  display:block;
+  height:auto;
+  aspect-ratio: 1 / 1;
+  background:#fff;
+  align-self:start;
+}
+.slide-note{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  gap:8px;
+  padding: 22px 24px;
+}
+.slide-tag{
+  align-self:flex-start;
+  font-family: var(--mono);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.08em;
+  color: var(--c);
+  border:2px solid var(--c);
+  border-radius:6px;
+  padding:3px 10px;
+}
+.slide-note h4{ font-size:20px; margin:6px 0 0; color: var(--text); }
+.slide-def{ font-family: var(--mono); font-size:11px; letter-spacing:.05em; text-transform:uppercase; color: var(--text-faint); }
+.slide-note p{ margin:6px 0 0; font-size:14.5px; line-height:1.7; color: var(--text-soft); }
+@media (max-width: 680px){
+  .slider--notes .slide{ grid-template-columns: 1fr; }
+  .slide-note{ padding: 18px 18px 20px; }
+}
