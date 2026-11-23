@@ -307,6 +307,58 @@
       <div class="model-verdict good"><strong>Advantages (TP &amp; TN):</strong> 79 OLD faces and 2,037 MIDDLE and YOUNG faces were classified correctly. Only 29 non-OLD faces were labeled OLD, so an OLD prediction is usually right (precision 0.73).</div>
       <div class="model-verdict bad"><strong>Disadvantages (FP &amp; FN):</strong> 280 of the 359 OLD faces were labeled MIDDLE or YOUNG and only 79 were caught, which is why OLD recall is just 0.22. A further 29 non-OLD faces were wrongly labeled OLD.</div>
     </div>
+
+    <h3>Sample predictions by outcome</h3>
+    <div class="slider slider--notes reveal" data-slider aria-roledescription="carousel" aria-label="Sample faces for true positives, true negatives, false positives and false negatives">
+      <div class="slider-viewport" tabindex="0">
+        <div class="slider-track">
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="1 of 4: True Positive (TP)" data-title="True Positive (TP)">
+          <a class="slide-media" href="images/age-sample-tp.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/age-sample-tp.jpg" alt="Sample of 40 faces the model correctly predicted as OLD"></a>
+          <figcaption class="slide-note" style="--c:#c6ff4d">
+            <span class="slide-tag">TP</span>
+            <h4>True Positive</h4>
+            <span class="slide-def">OLD predicted as OLD</span>
+            <p>The model accurately predicts OLD faces that wear eyeglasses, have a mustache or beard, have slightly light to pale brown skin, and have round facial features.</p>
+          </figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="2 of 4: True Negative (TN)" data-title="True Negative (TN)">
+          <a class="slide-media" href="images/age-sample-tn.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/age-sample-tn.jpg" alt="Sample of 40 MIDDLE and YOUNG faces the model correctly kept out of the OLD class" loading="lazy"></a>
+          <figcaption class="slide-note" style="--c:#4be8ff">
+            <span class="slide-tag">TN</span>
+            <h4>True Negative</h4>
+            <span class="slide-def">MIDDLE and YOUNG predicted correctly</span>
+            <p>The model can tell these faces apart from the OLD class because they wear no eyeglasses (only a few wear sunglasses) and have sharper facial features.</p>
+          </figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="3 of 4: False Positive (FP)" data-title="False Positive (FP)">
+          <a class="slide-media" href="images/age-sample-fp.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/age-sample-fp.jpg" alt="Sample of 40 MIDDLE and YOUNG faces the model wrongly predicted as OLD" loading="lazy"></a>
+          <figcaption class="slide-note" style="--c:#ff6f61">
+            <span class="slide-tag">FP</span>
+            <h4>False Positive</h4>
+            <span class="slide-def">MIDDLE or YOUNG predicted as OLD</span>
+            <p>The model falsely predicts faces that wear eyeglasses as OLD (19 of 40 images, about 47.5% of the samples), which contributes to the false positives.</p>
+          </figcaption>
+        </figure>
+        <figure class="slide" role="group" aria-roledescription="slide" aria-label="4 of 4: False Negative (FN)" data-title="False Negative (FN)">
+          <a class="slide-media" href="images/age-sample-fn.jpg" target="_blank" rel="noopener" title="Open full size"><img src="images/age-sample-fn.jpg" alt="Sample of 40 OLD faces the model wrongly predicted as MIDDLE or YOUNG" loading="lazy"></a>
+          <figcaption class="slide-note" style="--c:#ffc857">
+            <span class="slide-tag">FN</span>
+            <h4>False Negative</h4>
+            <span class="slide-def">OLD predicted as MIDDLE or YOUNG</span>
+            <p>The model struggles to tell the MIDDLE and OLD classes apart. The most commonly misclassified faces are old men without glasses, overly cropped photos, and old women with sharper facial features and no eyeglasses.</p>
+          </figcaption>
+        </figure>
+        </div>
+      </div>
+      <div class="slider-controls">
+        <button type="button" class="slider-btn" data-dir="-1" aria-label="Previous slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M11 6l-6 6 6 6"/></svg></button>
+        <div class="slider-meta">
+          <div class="slider-caption" aria-live="polite"><span class="slider-count">1 / 4</span><span class="slider-title">True Positive (TP)</span></div>
+          <div class="slider-dots"><button type="button" class="slider-dot active" aria-label="Go to slide 1" aria-current="true"></button><button type="button" class="slider-dot" aria-label="Go to slide 2"></button><button type="button" class="slider-dot" aria-label="Go to slide 3"></button><button type="button" class="slider-dot" aria-label="Go to slide 4"></button></div>
+        </div>
+        <button type="button" class="slider-btn" data-dir="1" aria-label="Next slide"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
   </section>
 
   <section class="detail-section" id="conclusions">
