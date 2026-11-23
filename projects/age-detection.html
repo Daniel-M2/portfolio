@@ -245,6 +245,68 @@
     <div class="stat-row">
       <div class="stat-chip"><span class="stat-value">69–71%</span><span class="stat-label">Model accuracy across age classes</span></div>
     </div>
+
+    <div class="chart-block reveal">
+      <div class="chart-block-head">Confusion Matrix &mdash; Xception (Test Set)</div>
+      <svg viewBox="0 0 560 372" role="img" aria-label="Confusion matrix of the Xception model on the test set">
+        <text x="171.5" y="306" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">MIDDLE</text>
+        <text x="306.5" y="306" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">OLD</text>
+        <text x="441.5" y="306" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">YOUNG</text>
+        <text x="92" y="73.0" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">MIDDLE</text>
+        <text x="92" y="159.0" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">OLD</text>
+        <text x="92" y="245.0" text-anchor="end" font-family="'JetBrains Mono',monospace" font-size="12" fill="var(--text-soft)">YOUNG</text>
+        <text x="306.5" y="336" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--text-faint)">Predicted label</text>
+        <text transform="rotate(-90 22 155.0)" x="22" y="159.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="11" fill="var(--text-faint)">True label</text>
+        <rect x="106" y="28" width="131" height="82" rx="7" fill="#788a80"/>
+        <text x="171.5" y="77.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#0a0d0b">1361</text>
+        <rect x="241" y="28" width="131" height="82" rx="7" fill="#1c231f"/>
+        <text x="306.5" y="77.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">26</text>
+        <rect x="376" y="28" width="131" height="82" rx="7" fill="#2a332e"/>
+        <text x="441.5" y="77.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">234</text>
+        <rect x="106" y="114" width="131" height="82" rx="7" fill="#2a332e"/>
+        <text x="171.5" y="163.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">233</text>
+        <rect x="241" y="114" width="131" height="82" rx="7" fill="#1f2723"/>
+        <text x="306.5" y="163.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">79</text>
+        <rect x="376" y="114" width="131" height="82" rx="7" fill="#1d2520"/>
+        <text x="441.5" y="163.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">47</text>
+        <rect x="106" y="200" width="131" height="82" rx="7" fill="#313a35"/>
+        <text x="171.5" y="249.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">327</text>
+        <rect x="241" y="200" width="131" height="82" rx="7" fill="#1a211d"/>
+        <text x="306.5" y="249.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">3</text>
+        <rect x="376" y="200" width="131" height="82" rx="7" fill="#49554e"/>
+        <text x="441.5" y="249.0" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="24" font-weight="700" fill="#eef2ee">676</text>
+        <rect x="242.5" y="115.5" width="128" height="79" rx="6" fill="none" stroke="#c6ff4d" stroke-width="3"/>
+        <rect x="249" y="121" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="262" y="133" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#c6ff4d">TP</text>
+        <rect x="107.5" y="29.5" width="128" height="79" rx="6" fill="none" stroke="#4be8ff" stroke-width="3"/>
+        <rect x="114" y="35" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="127" y="47" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#4be8ff">TN</text>
+        <rect x="377.5" y="201.5" width="128" height="79" rx="6" fill="none" stroke="#4be8ff" stroke-width="3"/>
+        <rect x="384" y="207" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="397" y="219" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#4be8ff">TN</text>
+        <rect x="242.5" y="29.5" width="128" height="79" rx="6" fill="none" stroke="#ff6f61" stroke-width="3"/>
+        <rect x="249" y="35" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="262" y="47" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#ff6f61">FP</text>
+        <rect x="242.5" y="201.5" width="128" height="79" rx="6" fill="none" stroke="#ff6f61" stroke-width="3"/>
+        <rect x="249" y="207" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="262" y="219" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#ff6f61">FP</text>
+        <rect x="107.5" y="115.5" width="128" height="79" rx="6" fill="none" stroke="#ffc857" stroke-width="3"/>
+        <rect x="114" y="121" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="127" y="133" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#ffc857">FN</text>
+        <rect x="377.5" y="115.5" width="128" height="79" rx="6" fill="none" stroke="#ffc857" stroke-width="3"/>
+        <rect x="384" y="121" width="26" height="16" rx="4" fill="#0a0d0b"/>
+        <text x="397" y="133" text-anchor="middle" font-family="'JetBrains Mono',monospace" font-size="10.5" font-weight="700" fill="#ffc857">FN</text>
+        </svg>
+      <div class="cm-legend">
+        <div class="cm-item" style="--c:#c6ff4d"><span class="cm-swatch"></span><div><strong>TP = 79</strong>OLD predicted as OLD</div></div>
+        <div class="cm-item" style="--c:#4be8ff"><span class="cm-swatch"></span><div><strong>TN = 2,037</strong>MIDDLE and YOUNG predicted correctly</div></div>
+        <div class="cm-item" style="--c:#ff6f61"><span class="cm-swatch"></span><div><strong>FP = 29</strong>MIDDLE or YOUNG predicted as OLD</div></div>
+        <div class="cm-item" style="--c:#ffc857"><span class="cm-swatch"></span><div><strong>FN = 280</strong>OLD predicted as MIDDLE or YOUNG</div></div>
+      </div>
+      <div class="chart-note">Positive class (TRUE) = OLD; negative class (FALSE) = YOUNG and MIDDLE.</div>
+      <div class="model-verdict good"><strong>Advantages (TP &amp; TN):</strong> 79 OLD faces and 2,037 MIDDLE and YOUNG faces were classified correctly. Only 29 non-OLD faces were labeled OLD, so an OLD prediction is usually right (precision 0.73).</div>
+      <div class="model-verdict bad"><strong>Disadvantages (FP &amp; FN):</strong> 280 of the 359 OLD faces were labeled MIDDLE or YOUNG and only 79 were caught, which is why OLD recall is just 0.22. A further 29 non-OLD faces were wrongly labeled OLD.</div>
+    </div>
   </section>
 
   <section class="detail-section" id="conclusions">
