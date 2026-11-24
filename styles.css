@@ -1381,3 +1381,45 @@ section{ padding: 100px 0; }
   .slider--notes .slide{ grid-template-columns: 1fr; }
   .slide-note{ padding: 18px 18px 20px; }
 }
+
+/* ---------- callout card (detail pages) ---------- */
+.callout{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+  margin: 22px 0 26px;
+  padding: 20px 22px;
+  background:
+    linear-gradient(135deg, rgba(198,255,77,0.08), rgba(75,232,255,0.06)),
+    var(--card);
+  border: 1px solid var(--border-strong);
+  border-radius: 16px;
+  box-shadow: 0 14px 30px -22px rgba(0,0,0,0.7);
+}
+.callout-icon{
+  flex-shrink:0;
+  width:42px; height:42px;
+  border-radius:12px;
+  display:flex; align-items:center; justify-content:center;
+  color:#08110c;
+  background: linear-gradient(135deg, var(--lime), var(--cyan));
+}
+.callout-icon svg{ width:22px; height:22px; }
+.callout-body{ min-width:0; }
+.callout-label{
+  display:block;
+  font-family: var(--mono);
+  font-size:11px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color: var(--text-faint);
+  margin-bottom:6px;
+}
+.callout-body p{ margin:0; font-size:15px; line-height:1.7; color: var(--text-soft); }
+.callout-body strong{ color: var(--text); font-weight:600; }
+.callout-body a{ color: var(--cyan); text-decoration: underline; text-underline-offset: 3px; }
+.callout-body a:hover{ color: var(--lime); }
+@media (max-width: 680px){
+  .callout{ padding:16px; gap:12px; }
+  .callout-icon{ width:36px; height:36px; border-radius:10px; }
+}
